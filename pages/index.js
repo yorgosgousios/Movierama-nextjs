@@ -1,7 +1,9 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import NowPlayingList from "../components/NowPlayingList";
 
 export default function Home() {
-  return <div>ela re malaka<div/>;
+  return (
+    <>
+      <NowPlayingList />
+    </>
+  );
 }
