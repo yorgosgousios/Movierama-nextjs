@@ -3,7 +3,7 @@ import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useState } from "react";
-import { ReactQueryDevtools } from "react-query-devtools";
+import { ReactQueryDevtools } from "react-query/devtools";
 
 function MyApp({ Component, pageProps }) {
   const [queryClient] = useState(() => new QueryClient());
