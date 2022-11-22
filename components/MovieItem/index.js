@@ -1,5 +1,6 @@
-import { Text, Box, Image, Spinner } from "@chakra-ui/react";
+import { Text, Box, Spinner } from "@chakra-ui/react";
 import { useState } from "react";
+import Image from "next/image";
 
 const MovieItem = ({ title, img, releaseDate, isLoading }) => {
   const [isHover, setIsHover] = useState(false);
@@ -15,9 +16,9 @@ const MovieItem = ({ title, img, releaseDate, isLoading }) => {
           borderRadius={"4px"}
         >
           <Box
-            background={`url(${img})`}
             display="flex"
             justifyContent={"center"}
+            background="#c1c1c1"
             alignItems="center"
             _hover={{
               transform: "scale(1.1)",
@@ -27,12 +28,14 @@ const MovieItem = ({ title, img, releaseDate, isLoading }) => {
               cursor: "pointer",
             }}
             maxH="100%"
-            maxW={"287px%"}
+            maxW={"287px"}
             h="161px"
-            backgroundSize={"cover"}
+            // backgroundSize={"contain"}
+            // backgroundRepeat="no-repeat"
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}
           >
+            <Image fill quality={100} src={img} />
             {isHover && (
               <Text
                 cursor={"pointer"}

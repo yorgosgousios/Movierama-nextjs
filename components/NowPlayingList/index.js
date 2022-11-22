@@ -7,7 +7,7 @@ import Pagination from "../Pagination";
 
 const NowPlayingList = () => {
   const { newMovieData, isLoading, page, setPage, fetchNextPage } = useMovies();
-  console.log(newMovieData, "data");
+
   const imgSrc = "https://www.themoviedb.org/t/p/w188_and_h282_bestv2/";
 
   return (
